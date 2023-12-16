@@ -1,7 +1,7 @@
 freecurrencyapi
 ==============================
 
-Study Project: Collect data from the CurrencyConverter Private API, process and store it in Google Cloud services (Cloud Function, Cloud Scheduler, Cloud Scret Manager and Cloud Storage).
+Study Project: Collect data from the FreeCurrencyAPI a Private API, process and store it in Google Cloud services (Cloud Function, Cloud Scheduler, Cloud Scret Manager and Cloud Storage).
 
 Project Organization
 ------------
