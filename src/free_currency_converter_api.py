@@ -61,3 +61,11 @@ class FileHandler:
 
         with full_path.open(mode='w') as file:
             json.dump(data, file, indent=4)
+
+
+if __name__ == "__main__":
+
+    freecurrency = FreeCurrencyAPI()
+    explore = FileHandler()
+    apidata = freecurrency.GetLatest()
+    explore.save_json(apidata)
