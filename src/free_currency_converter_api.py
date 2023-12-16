@@ -16,10 +16,21 @@ class FreeCurrencyAPI:
         load_dotenv()
         self._apikey = os.getenv("API_TOKEN", None)
 
-    def GetHistoricalData(self):
-        server = "https://free.currconv.com"
-        query = self.fromCurrency + "_" + self.toCurrency
-        module = f"/api/v7/convert?q={query},{query}&compact=ultra&date=[{self.startDate}]&endDate=[{self.endDate}]&apiKey=[{self._apitoken}]"
-        url = server+module
-        response = requests.get(url)
-        return response
+    def GetLatest(self):
+        """
+        The GetLatest method
+        """
+        endpoint = "/v1/latest"
+        request_url = self.base_url + endpoint
+        params = {"base_currency": self.base_currency}
+
+        with requests.session() as session:
+            session.headers.update({"apikey": self._apikey})
+            response = session.get(
+                request_url,
+                params=params
+            )
+        if response.status_code == 200:
+            return response.json
+        else:
+            raise Exception(response.status_code)
