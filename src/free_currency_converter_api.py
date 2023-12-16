@@ -3,15 +3,18 @@ import os
 from dotenv import load_dotenv
 
 
-class CurrencyAPI:
-
-    def __init__(self, startDate, endDate, fromCurrency, toCurrency):
-        self.startDate = startDate
-        self.endDate = endDate
-        self.fromCurrency = fromCurrency
-        self.toCurrency = toCurrency
+class FreeCurrencyAPI:
+    """
+    Nice description here
+    """
+    def __init__(self, base_currency="BRL"):
+        """
+        The init method
+        """
+        self.base_currency = base_currency
+        self.base_url = "https://api.freecurrencyapi.com"
         load_dotenv()
-        self._apitoken = os.getenv('API_TOKEN', None)
+        self._apikey = os.getenv("API_TOKEN", None)
 
     def GetHistoricalData(self):
         server = "https://free.currconv.com"
