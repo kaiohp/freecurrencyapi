@@ -30,7 +30,7 @@ class FreeCurrencyAPI:
                 request_url,
                 params=params
             )
-        if response.status_code == 200:
-            return response.json
+        if response.status_code == 200:  # API docs: success -> status code 200
+            return response.json()
         else:
             raise Exception(response.status_code)
