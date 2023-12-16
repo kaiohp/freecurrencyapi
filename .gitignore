@@ -12,4 +12,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-/data/
+/data/interim/
+/data/processed/
+/data/raw/
