@@ -15,4 +15,8 @@ __pycache__/
 data/interim/
 data/processed/
 data/raw/
-!*.gitkeep
+
+# include gitkeep to preserv the Project Organization
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/raw/.gitkeep
