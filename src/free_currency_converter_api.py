@@ -57,7 +57,7 @@ class FileHandler:
         if file_name is None:
             file_name = self.file_name
 
-        full_path = local / file_name
+        full_path = Path(local, file_name)
 
         with full_path.open(mode='w') as file:
             json.dump(data, file, indent=4)
