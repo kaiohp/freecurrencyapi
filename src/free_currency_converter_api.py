@@ -20,7 +20,7 @@ class FreeCurrencyAPI:
         load_dotenv(self._dotenv_path)
         self._apikey = os.getenv("API_TOKEN")
 
-    def GetLatest(self):
+    def get_latest(self):
         """
         The GetLatest method
         """
@@ -34,7 +34,8 @@ class FreeCurrencyAPI:
                 request_url,
                 params=params
             )
-        if response.status_code == 200:  # API docs: success -> status code 200
+
+        if response.status_code in range(200, 300):
             return response.json()
         else:
             raise Exception(response.status_code)
@@ -67,5 +68,5 @@ if __name__ == "__main__":
 
     freecurrency = FreeCurrencyAPI()
     explore = FileHandler()
-    apidata = freecurrency.GetLatest()
+    apidata = freecurrency.get_latest()
     explore.save_json(apidata)
