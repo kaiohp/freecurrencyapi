@@ -12,11 +12,6 @@ __pycache__/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-data/interim/
-data/processed/
-data/raw/
-
-# include gitkeep to preserv the Project Organization
-!data/interim/.gitkeep
-!data/processed/.gitkeep
-!data/raw/.gitkeep
+/data/**
+!/data/**/
+!/data/**/.gitkeep
