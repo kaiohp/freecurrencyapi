@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "freecurrencyapi"
+version = "0.1.0"
+description = "Study Project: Collect data from the FreeCurrencyAPI a Private API, process and store it in Google Cloud services (Cloud Function, Cloud Scheduler, Cloud Scret Manager and Cloud Storage)."
+authors = ["Kaio Silva <kaiohp.silva1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-dotenv = "^1.0.0"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
