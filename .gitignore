@@ -12,10 +12,10 @@ __pycache__/
 .ipynb_checkpoints/
 
 # exclude data from source control by default
-/data/**
-!/data/**/
-!/data/**/.gitkeep
+freecurrencyapi/data/**
+!freecurrencyapi/data/**/
+!freecurrencyapi/data/**/.gitkeep
 
-/tests/**
-!/tests/**/
-!/tests/**/.gitkeep
+freecurrencyapi/tests/**
+!freecurrencyapi/tests/**/
+!freecurrencyapi/tests/**/.gitkeep
