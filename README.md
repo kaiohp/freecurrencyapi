@@ -24,8 +24,11 @@ Project Organization
     ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
     │
     ├── src                <- Source code for use in this project.
-        ├── __init__.py    <- Makes src a Python module
-
+    │  ├── __init__.py    <- Makes src a Python module
+    │
+    │
+    ├── tests
+    │   ├── data <- data that has been created from test.
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
