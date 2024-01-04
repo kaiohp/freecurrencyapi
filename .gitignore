@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+**__pycache__/
+**.py[cod]
+
+# DotEnv configuration
+.env
+
+# VS Code
+.vscode/
+
+# Jupyter NB Checkpoints
+**.ipynb_checkpoints/
+
+# exclude data from source control by default
+freecurrencyapi/data/**
+!freecurrencyapi/data/**/
+!freecurrencyapi/data/**/.gitkeep
+
+freecurrencyapi/tests/**
+!freecurrencyapi/tests/**/
+!freecurrencyapi/tests/**/.gitkeep
