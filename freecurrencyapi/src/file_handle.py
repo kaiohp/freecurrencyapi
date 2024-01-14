@@ -1,5 +1,3 @@
-import os
-from dotenv import load_dotenv, find_dotenv
 from pathlib import Path
 from datetime import datetime
 import json
@@ -14,8 +12,6 @@ class FileHandler:
         self.run_datetime = datetime.now().date().isoformat()
         self.local = Path(local)
         self.file_name = f"{file_name}_{self.run_datetime}.json"
-        load_dotenv(find_dotenv())
-        self._GCLOUD = os.getenv("GCLOUD")
 
     def save_json(self, data):
 
@@ -27,5 +23,8 @@ class FileHandler:
 
 if __name__ == "__main__":
     test_data = json.dumps({"Test": "Sucess"})
-    file_explore = FileHandler(local="freecurrencyapi/tests/data", file_name="test_data")
+    file_explore = FileHandler(
+        local="freecurrencyapi/tests/data",
+        file_name="test_data"
+    )
     file_explore.save_json(test_data)
