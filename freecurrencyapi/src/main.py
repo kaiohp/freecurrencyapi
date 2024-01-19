@@ -17,8 +17,8 @@ def start(request):
     else:
         cloud_storage_client = CSClient()
         currency = collector.base_currency
-        path = cloud_storage_client.create_path()
-        destination = f"{currency}/{currency}_{path}"
+        path = cloud_storage_client.create_path(currency)
+        destination = f"{currency}/{path}"
         return cloud_storage_client.send_json_object(
             api_data,
             destination=destination,
@@ -27,4 +27,4 @@ def start(request):
 
 
 if __name__ == "__main__":
-    start({"Local": "Mudei a conta de serviço"})
+    start({})

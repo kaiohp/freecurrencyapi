@@ -7,12 +7,12 @@ class CSClient():
     def __init__(self):
         self.client = storage.Client()
 
-    def create_path(self):
+    def create_path(self, prefix):
         now_timestamp = datetime.now()
         year = now_timestamp.year
         month = now_timestamp.month
         day = now_timestamp.date().isoformat()
-        path = f"{str(year)}/{str(month)}/{day}.json"
+        path = f"{str(year)}/{str(month)}/{prefix}_{day}.json"
         return path
 
     def send_json_object(self, data, destination, bucket_name):
