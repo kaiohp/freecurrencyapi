@@ -18,7 +18,7 @@ def start(request):
         cloud_storage_client = CSClient()
         currency = collector.base_currency
         path = cloud_storage_client.create_path()
-        destination = f"{currency}/{path}"
+        destination = f"{currency}/{currency}_{path}"
         return cloud_storage_client.send_json_object(
             api_data,
             destination=destination,
