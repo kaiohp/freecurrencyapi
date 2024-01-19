@@ -11,7 +11,7 @@ class CSClient():
         now_timestamp = datetime.now()
         year = now_timestamp.year
         month = now_timestamp.month
-        day = now_timestamp.day
+        day = now_timestamp.date().isoformat()
         path = f"{str(year)}/{str(month)}/{day}.json"
         return path
 
