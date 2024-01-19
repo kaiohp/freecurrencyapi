@@ -6,6 +6,6 @@ steps:
   - deploy
   - CF-freecurrencyapi
   - --region=southamerica-east1
-  - --source=.
+  - --source=/freecurrencyapi/src/
   - --trigger-http
   - --runtime=RUNTIME
