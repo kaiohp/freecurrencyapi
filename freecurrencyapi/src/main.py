@@ -27,4 +27,4 @@ def start(request):
 
 
 if __name__ == "__main__":
-    start({})
+    start({"Local": "Teste"})
