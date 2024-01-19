@@ -1,3 +1,11 @@
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['functions', 'deploy', 'CF-freecurrencyapi', '--source=.']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  args:
+  - gcloud
+  - functions
+  - deploy
+  - CF-freecurrencyapi
+  - --region=southamerica-east1
+  - --source=.
+  - --trigger-http
+  - --runtime=RUNTIME
