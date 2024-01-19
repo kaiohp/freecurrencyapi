@@ -8,4 +8,4 @@ steps:
   - --region=southamerica-east1
   - --source=freecurrencyapi/src/
   - --trigger-http
-  - --runtime=RUNTIME
+  - --runtime=python310
