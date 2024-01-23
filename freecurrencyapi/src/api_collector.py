@@ -1,20 +1,17 @@
 import requests
-import os
-from dotenv import load_dotenv, find_dotenv
 
 
 class FreeCurrencyCollector:
     """
     Nice description here
     """
-    def __init__(self, base_currency="BRL"):
+    def __init__(self, base_currency="BRL", api_token=None):
         """
         The init method
         """
         self.base_currency = base_currency
         self.base_url = "https://api.freecurrencyapi.com"
-        load_dotenv(find_dotenv())
-        self._APIKEY = os.getenv("API_TOKEN")
+        self._APIKEY = api_token
 
     def get_latest(self):
         """
