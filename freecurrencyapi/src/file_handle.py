@@ -19,6 +19,7 @@ class FileHandler:
 
         with full_path.open(mode='w') as file:
             json.dump(data, file, indent=4)
+        return print(f"Data saved on Local Storage in {full_path}")
 
 
 if __name__ == "__main__":
