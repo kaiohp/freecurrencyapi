@@ -28,7 +28,7 @@ def start(request):
             destination=path,
             bucket_name='free_currency_exchange_data'
         )
-    return print('End run')
+    return None
 
 
 if __name__ == "__main__":
