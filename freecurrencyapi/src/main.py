@@ -28,7 +28,7 @@ def start(request):
             destination=path,
             bucket_name='free_currency_exchange_data'
         )
-    return None
+    return "End of pipeline"
 
 
 if __name__ == "__main__":
