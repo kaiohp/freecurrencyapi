@@ -6,8 +6,8 @@ import os
 
 
 def start(request):
-    load_dotenv(find_dotenv())
     if request == "Local":
+        load_dotenv(find_dotenv())
         secret = os.getenv("API_TOKEN")
         collector = FreeCurrencyCollector(api_token=secret)
         api_data = collector.get_latest()
